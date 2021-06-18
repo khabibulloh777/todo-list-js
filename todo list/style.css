@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+background-image: linear-gradient(to left, rgba(16, 0, 46, 0.8888) , rgb(9, 231, 9));
+width: 100%;
+height: auto;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+
+.container{
+    width: 35%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px , rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 20px;
+}
+.wrapper {
+    width: 84%;
+    margin: 30px auto;
+    padding: 10px 0px  30px  0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; 
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 55;
+}
+.task__adder {
+    width: 90%;
+    margin: 0px 5%;
+}
+
+.task__adder :is(h1){
+    padding: 20px 0px ;
+    font-weight : 300;
+}
+
+#task_adderPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#task_adderPanel :is(input){
+    padding: 10px 0px;
+    flex: 1;
+    font-size: 16px;
+    text-indent: 10px;
+    outline: none;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    color: #79790a;
+    box-shadow: rgb(189 183 / 39%) 0px 0px 3px 1px inset, rgb(255 255 255) 0px -1px 1px , rgb(255 255 255) 0px 1px 0px ;
+
+}
+#task__filter{
+    width: 84%;
+   padding: 10px 0;
+   margin-left: 40px;
+   font-size: 16px;
+   text-indent: 10px;
+   outline: none;
+   background-color: rgb(248, 248, 248);
+   border-radius: 15px;
+   color: rgb(104, 101, 101);
+   box-shadow: rgb(189 183 / 39%) 0px 0px 3px 1px inset, rgb(255 255 255) 0px -1px 1px , rgb(255 255 255) 0px 1px 0px ;
+   
+
+}
+#task__filter::placeholder {
+    color: rgb(179, 179, 179);
+}
+#task__addPanel :is(button){
+    padding: 10px 10px ;
+    font-size: 16px;
+    margin-left: 20px ;
+    background-color: rgb(211, 214, 213);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+
+}
+.task_collection {
+    width: 84%;
+    min-height: 300px;
+    margin: 0px auto;
+    height: auto;
+    border-radius: 10px;
+    z-index: 555;
+}
+
+.task {
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(138, 193, 201, 0.897);
+    box-shadow: rgba(58, 42, 42, 0.88);
+    display: flex;
+    align-items: center ;
+    padding: 0px 15px;
+    border-radius: 10px ;
+    transition: all 0.7s ease-in-out;
+    animation: fade 0.8s linear;
+    cursor: pointer;
+    font-weight: 800;
+}
+.task > p {
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: scaleX(0.7);
+    }
+    20%{
+        transform: scaleX(1);
+    }
+    40%{transform: scaleX(0.75);}
+    60%{transform: scaleX(1);}
+    80%{transform: scaleX(0.85);}
+    100%{transform: scaleX(1); opacity: 100%;}
+
+}
+.task > p {
+    min-width: 80%;
+    max-width: 90%;
+    flex: 1;
+    color: rgb(81, 238, 81);
+}
+
+.task > a > i {
+    color: #f02c2c;
+    cursor: pointer;
+}
+
+.operations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#delete__all{
+    padding: 10px 10px ;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px ;
+    border: none;
+    outline: none;
+    margin: 20px ;
+    font-weight: 300;
+    letter-spacing: 2px ;
+    background-color: #000;
+    cursor: pointer;
+}
+#sory__select {
+    padding: 10px ;
+    font-size: 17px ;
+    margin-right: 20px;
+    border: none;
+    background-color: rgb(255, 255, 26);
+   border-radius: 5px ;
+   outline: none;
+}
+option {
+    background-color: #000;
+    color: yellow;
+}
+.alert_ask {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(255, 255, 26);
+    font-size: 17px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.alert_ask > i {
+    font-size: 50px;
+    margin: 30px 0 ;
+
+}
+.alert_ask > p {
+    width: 80%;
+    text-align: center;
+
+}
+.ask {
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.ask input {
+    color: #fff;
+    font-size: 16px ;
+    padding: 5px 15px ;
+    background-color: rgb(252, 29, 29);
+    border: none;
+    font-weight: 300;
+    letter-spacing: 1px ;
+    border-radius: 5px ;
+
+}
+.ask input:last-child){
+    background-color: black;
+}
+

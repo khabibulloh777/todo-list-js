@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+</head>
+<body>
+    
+<div class="container">
+    <div class="task_container">
+        <div class="wrapper">
+            <div class="task_adder">
+                <h1>ADD TASK</h1>
+               <form id="task_adderPanel"> 
+             <input type="text" placeholder="Add Task" id="task_name" minlength="3">
+                  <button type="submit" >add task</button>
+               </form> 
+            </div>
+            <div class="operations">
+                <button id="delete__all"  >Delete all</button>
+                <select name="" id="sort__select">
+                <option value="by_alphabet">a-z</option>
+                <option value="date">date</option>
+            </select>
+            </div>
+        </div>
+        <input type="text" placeholder="search tasks" id="task__filter">
+        <ul class="task_collection" id="collect"></ul>
+    </div>
+</div>
+<div class="alert_ask">
+   <i class="fas fa-question-circle"></i>
+   <p>Are you sure? I hope you know what you are doing.</p>
+   <div class="ask">
+       <input type="button" value="Yes" id="yes__btn">
+       <input type="button" value="no" id="no_btn">
+   </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
